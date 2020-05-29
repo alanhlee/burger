@@ -1,0 +1,18 @@
+<h1>Burgers to Devour</h1>
+
+<form>
+  <p>
+    <label for="title">Burger Name</label>
+    <input type="text" name="name" id="name">
+  </p>
+  <button id="addBurger">Add Burger</button>
+</form>
+
+<ol id="burgers">
+  {{#each burgers}}
+  <li>
+    {{this.name}
+    {{this.devoured}}
+  </li>
+  {{/each}}
+</ol>
