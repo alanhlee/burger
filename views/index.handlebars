@@ -4,11 +4,13 @@
   <p>
     <label for="title">Burger Name</label>
     <input type="text" name="name" id="burgerName">
+    <button id="addBurger">Add Burger</button>
   </p>
-  <button id="addBurger">Add Burger</button>
+  
 </form>
 <div id='listContainer'>
 <ol id="burgers">
+  <h3>Burgers to Devour</h3>
   {{#each devour}}
   <li>
     {{this.burger_name}}
@@ -17,7 +19,9 @@
   </li>
   {{/each}}
 </ol>
+
 <ul id='devoured'>
+  <h3>Burgers Devoured</h3>
   {{#each devoured}}
   <li>
     {{this.burger_name}}
