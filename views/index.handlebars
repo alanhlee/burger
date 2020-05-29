@@ -11,8 +11,13 @@
 <ol id="burgers">
   {{#each burgers}}
   <li>
-    {{this.name}
-    {{this.devoured}}
+    {{this.burger_name}}
+    <button class='devour' data-id=`{{this.burger.id}}` data-devour=`{{this.devour}}` value={{this.burger_name}}>Devour It</button>
   </li>
   {{/each}}
 </ol>
+<ul id='devoured'>
+
+</ul>
+
+<script src='./burgers.js'></script>
