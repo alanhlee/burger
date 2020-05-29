@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Burger = require("../models/burger.js");
 
-router.get("/burgers", (req, res) => {
+router.get("/", (req, res) => {
   Burger.getBurgers((burgers) => {
     let devour = []
     let devoured = []
