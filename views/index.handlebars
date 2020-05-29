@@ -3,21 +3,26 @@
 <form>
   <p>
     <label for="title">Burger Name</label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="burgerName">
   </p>
   <button id="addBurger">Add Burger</button>
 </form>
 
 <ol id="burgers">
-  {{#each burgers}}
+  {{#each devour}}
   <li>
     {{this.burger_name}}
-    <button class='devour' data-id=`{{this.burger.id}}` data-devour=`{{this.devour}}` value={{this.burger_name}}>Devour It</button>
+    <button class="devour" data-id="{{this.id}}"
+      value="{{this.burger_name}}">Devour It</button>
   </li>
   {{/each}}
 </ol>
 <ul id='devoured'>
-
+  {{#each devoured}}
+  <li>
+    {{this.burger_name}}
+  </li>
+  {{/each}}
 </ul>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src='./burgers.js'></script>

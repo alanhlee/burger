@@ -7,7 +7,7 @@ module.exports = {
   updateBurger(changes, where, cb) {
     orm.updateOne("burgers", changes, where, (info) => cb(info));
   },
-  addBurger(game, cb) {
+  addBurger(burger, cb) {
     orm.insertOne("burgers", burger, (info) => cb(info));
   },
 };

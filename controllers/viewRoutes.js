@@ -3,8 +3,15 @@ const Burger = require("../models/burger.js");
 
 router.get("/burgers", (req, res) => {
   Burger.getBurgers((burgers) => {
-    // console.log(burgers)
-    res.render("index", { burgers })
+    let devour = []
+    let devoured = []
+    burgers.forEach((burger) => {
+      if (burger.devoured === 0) {
+        devour.push(burger)
+      }
+      else devoured.push(burger)
+    })
+    res.render("index", { devour, devoured })
   })
 })
 
