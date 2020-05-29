@@ -9,6 +9,6 @@ app.use(express.json());
 app.engine(".hbs", require("express-handlebars")({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 
-app.use(require("./routes"));
+app.use(require("./controllers/burgers_controller.js"));
 
 app.listen(3000, () => console.log("http://localhost:3000"));

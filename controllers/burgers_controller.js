@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Burger } = require('../models/burger.js')
+const Burger = require('../models/burger.js')
 
 router.get("/burgers", (req, res) => Burger.getBurgers((burgers) => res.json(burgers)));
 
@@ -8,7 +8,7 @@ router.post("/burgers", (req, res) =>
 );
 
 router.put("/burgers/:id", (req, res) =>
-  Game.updateBurger(req.body, { id: req.params.id }, (info) => res.json(info))
+  Burger.updateBurger(req.body, { id: req.params.id }, (info) => res.json(info))
 );
 
 module.exports = router;
